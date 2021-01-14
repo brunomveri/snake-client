@@ -8,11 +8,12 @@ const setupInput = function(conn) {
   stdin.resume();
 
   stdin.on('data', handleUserInput);
-
+  
   return stdin;
 };
 
 function handleUserInput (key) {
+  
   if (key === '\u0003' || key === 'x') {
     process.exit();
   }
